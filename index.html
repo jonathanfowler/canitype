@@ -60,83 +60,47 @@
                     <p class="text-white-75 font-weight-light mb-4">
                         And it's completely free.
                     </p>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 text-center">
-                            <div class="mt-5">
-                                <a class="btn btn-light btn-lg js-scroll-trigger" id="quicktest">Take a quick test</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 text-center">
-                            <div class="mt-5">
-                                <a class="btn btn-light btn-lg js-scroll-trigger" href="#othertests">Other tests</a>
-                            </div>
-                        </div>
-                    </div>
+
 
 
                 </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <div class="mt-1">
+                            <a class="btn btn-light btn-lg js-scroll-trigger text-nowrap" id="quicktest">Take a quick
+                                test</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <div class="mt-1">
+                            <a class="btn btn-light btn-lg js-scroll-trigger" href="#othertests">Other tests</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </div>
     </header>
     <!-- Othertests-->
+
+
     <section class="page-section bg-info" id="othertests">
 
         <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-white font-weight-bold">Other typing tests</h1>
-                <hr class="dividerNew my-4" />
-            </div>
-        </div>
+            <div class="m-4 col-lg-10 align-self-end">
+                <h1 class="text-white font-weight-bold">Other typing tests</h1>
+                <hr class="dividerNew my-4">
+                <div class="">
+                    <p class="text-white-75 font-weight-light mb-4" style="font-size: 1.15rem;">
+                        Add text here about some of the other typing tests.
+                    </p>
 
-
-        <!-- <div class="row form-group justify-content-center">
-            <div class="col-md-6">
-                <div class="dropdown">
-                    <button class="btn btn-lg btn-primary dropdown-toggle myDropDownBtn" type="button" id="dropdownMenu1"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select your typing copy
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1" style="">
-                        <a class="dropdown-item" href="#">Straight</a>
-
-                        <a class="dropdown-item" href="#">Statistical</a>
-                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div data-toggle="tooltip" data-placement="left" class="tooltipStyle" title=""
-                    data-original-title="A straight copy test that includes alphabetical letters and very common
-                                punctuation marks, such as a period (full-stop), comma, and question mark. A statistical
-                                copy test includes alphanumerical data and many other common symbols found on the keyboard.">
-                    <i class="fa fa-question-circle fa-2x"></i>
-            </div>
         </div>
-        </div>
-
-        <div class="row form-group justify-content-center">
-            <div class="col-md-6">
-                <div class="dropdown">
-                    <button class="btn btn-lg btn-primary dropdown-toggle myDropDownBtn" type="button" id="dropdownMenu2"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select your timing
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="">
-                        <a class="dropdown-item" href="#">1-minute</a>
-
-                        <a class="dropdown-item" href="#">3-minutes</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div data-toggle="tooltip" data-placement="left" class="tooltipStyle" title="" data-original-title="A one-minute typing test may give you just an idea of your typing speed.
-                                                    However, to get the full picture you should complete a five-minute
-                                                    timing on a statistical copy.">
-                    <i class="fa fa-question-circle fa-2x"></i>
-                </div>
-            </div>
-        </div> -->
-
-
 
 
 
@@ -148,106 +112,114 @@
         <div class="container">
             <!-- replace with your endoint URL -->
             <form>
-                <div class="row">
+                <div class="row h-100 align-items-center justify-content-center text-center">
                     <!-- <div class="col-lg-3">
                 </div> -->
-                    <div class="col-sm-3 col-xs-12">
+                    <div class="col-lg-6 col-md-6 text-center">
                         <div class="form-group">
-                            <select name="typingType" class="form-control form-control-lg" id="selectTestType" required>
+                            <select name="typingType" class="form-control form-control-lg" id="selectTestType"
+                            data-toggle="tooltip" data-placement="right" data-html="true" required=""
+                                data-original-title="" title="">
                                 <option value="choose">--</option>
-                                <option data-name="STR">Straight</option>
-                                <option data-name="STAT">Statistical</option>
+                                <option data-name="STR">Straight copy</option>
+                                <option data-name="STAT">Statistical copy</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-xs-12">
-                        <div class="form-group">
-                            <div class="col">
-                                <div data-toggle="tooltip" data-placement="left" class="tooltipStyle" title=""
-                                    data-original-title="A one-minute typing test may give you just an idea of your typing speed.
-                                                            However, to get the full picture you should complete a five-minute
-                                                            timing on a statistical copy.">
-                                    <i class="fa fa-question-circle fa-2x"></i>
-                                </div>
-                            </div>
+                </div>
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <div class="mt-1">
+                            <div id="passErrMessType"></div>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-3">
-                </div> -->
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-3 col-xs-12">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-6 col-md-6 text-center">
                         <div class="form-group">
-                            <select name="typingTime" class="form-control form-control-lg" id="selectTestTime" required>
+                            <select name="typingTime" class="form-control form-control-lg" id="selectTestTime"
+                                data-toggle="tooltip" data-placement="right" data-html="true" required=""
+                                data-original-title="" title="">
                                 <option value="choose">--</option>
-                                <option data-name="ONE">A one-minute speed test</option>
-                                <option data-name="THREE">A three-minute speed test</option>
-                                <option data-name="FIVE">A five-minute speed test</option>
+                                <option data-name="ONE">A one-minute timing</option>
+                                <option data-name="THREE">A three-minute timing</option>
+                                <option data-name="FIVE">A five-minute speed timing</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-xs-12">
-                        <div class="form-group">
-                            <div class="col-md-6">
-                                <div data-toggle="tooltip" data-placement="left" class="tooltipStyle" title=""
-                                    data-original-title="A one-minute typing test may give you just an idea of your typing speed.
-                                                            However, to get the full picture you should complete a five-minute
-                                                            timing on a statistical copy.">
-                                    <i class="fa fa-question-circle fa-2x"></i>
-                                </div>
-                            </div>
+
+                </div>
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <div class="mt-1">
+                            <div id="passErrMessTime"></div>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="row">
-                    <div class="col-sm-3 col-xs-12">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-6 col-md-6 text-center">
                         <div class="form-group">
                             <div class="input-group input-group-lg">
-                                <input name="name" type="name" placeholder="candidate reference"
-                                    class="form-control border-left-0" id="candRef" maxlength="50">
+                                <input name="name" type="name" placeholder=""
+                                    class="form-control border-left-0" id="candRef" maxlength="50"
+                                    data-toggle="tooltip" data-placement="right" data-html="true" required=""
+                                    data-original-title="" title="">
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-xs-12">
-                        <div class="form-group">
-                            <div class="col-md-6">
-                                <div data-toggle="tooltip" data-placement="left" class="tooltipStyle" title=""
-                                    data-original-title="A one-minute typing test may give you just an idea of your typing speed.
-                                                            However, to get the full picture you should complete a five-minute
-                                                            timing on a statistical copy.">
-                                    <i class="fa fa-question-circle fa-2x"></i>
-                                </div>
-                            </div>
+
+                </div>
+
+
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <div class="mt-1">
+                            <a class="btn btn-light btn-lg js-scroll-trigger" id="dataEntered">Start</a>
                         </div>
                     </div>
                 </div>
 
-
-
-
-                <a type="submit" class="btn btn-primary" id="dataEntered">
+                <!-- <a type="submit" class="btn btn-primary" id="dataEntered">
                     <i class="fa fa-paper-plane"></i>
                     Start
-                </a>
+                </a> -->
 
 
-                <div id="pasErrMes"></div>
+                
 
 
             </form>
         </div>
 
-
-
-
-
-
+        <!-- <div class="container">
+            <form>
+              <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label text-success">Email</label>
+                <div class="col-sm-6">
+                  <input type="email" class="form-control is-valid" id="inputEmail" placeholder="Email">
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label text-danger">Password</label>
+                <div class="col-sm-6">
+                  <input type="password" class="form-control is-invalid" id="inputPassword" placeholder="Password">
+                </div>
+                <div class="col-sm-4">
+                  <small id="passwordHelp" class="text-danger">
+                    Must be 8-20 charang.
+                  </small>      
+                </div>
+              </div>
+            </form>
+          </div> -->
+      
 
 
 
@@ -265,7 +237,7 @@
 
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 class="text-uppercase text-black font-weight-bold">Frequently asked questions</h1>
+                    <h1 class="text-black font-weight-bold ">Frequently asked questions</h1>
                     <hr class="dividerNew FAQdivider my-4">
                 </div>
 
@@ -429,7 +401,7 @@
     <footer class="py-5">
         <!-- <div class="container">
             <div class="small text-center text-muted">Copyright © 2020 - Jon Fowler</div>
-        </div> --> 
+        </div> -->
     </footer>
 
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -449,8 +421,10 @@
             var checkTheInp = "";
             var testType = "";
             var testTime = "";
-            var div = document.getElementById("pasErrMes");
+            var div = document.getElementById("passErrMessType");
             div.textContent = "";
+            var div2 = document.getElementById("passErrMessTime");
+            div2.textContent = "";
             var candReference = "";
 
 
@@ -488,7 +462,7 @@
                     testType = abbrevSelected;
                 }
                 //console.log(testType);
-                var div = document.getElementById("pasErrMes");
+                var div = document.getElementById("passErrMessType");
                 div.textContent = "";
             });
             //When you hit change a dropdown selection 
@@ -497,13 +471,12 @@
                 if (abbrevSelected) {
                     testTime = abbrevSelected;
                 }
-                var div = document.getElementById("pasErrMes");
-                div.textContent = "";
+                var div2 = document.getElementById("passErrMessTime");
+                div2.textContent = "";
             });
             $("#candRef").on("change input keyup", function () {
                 checkTheInp = this.value.toString().length;
-                // var div = document.getElementById("pasErrMes");
-                // div.textContent = "";
+
             });
             $('#candRef').keypress(function (e) {
                 if (e.which == 13) {//Enter key pressed
@@ -513,13 +486,15 @@
 
             $("#dataEntered").on("click", function () {
                 // console.log("test");
-                var div = document.getElementById("pasErrMes");
+                var div = document.getElementById("passErrMessType");
                 div.textContent = "";
+                var div2 = document.getElementById("passErrMessTime");
+                div2.textContent = "";
 
                 if (testType <= 0) {
                     div.textContent = "You must select a test type.";
                 } else if (testTime <= 0) {
-                    div.textContent = "You must select a test time.";
+                    div2.textContent = "You must select a test time.";
                 } else {
                     // else if (checkTheInp <= 0) {
                     //     div.textContent = "You must enter a candidate reference.";
@@ -558,20 +533,26 @@
                 };
                 setTimeout(function () {
                     if (!loaded) {
-                        window.location.href = 'test'; //after .htaccess file sorted delete the append .html
+                        window.location.href = 'test.html'; //after .htaccess file sorted delete the append .html
                     }
                 }, 500);
             }
 
-            $('#myDropdown').on('show.bs.dropdown', function () {
-                // do something…
-            })
+            // $('#myDropdown').on('show.bs.dropdown', function () {
+            //     // do something…
+            // })
 
 
-            $('[data-toggle="tooltip"]').tooltip({
-                placement: 'right'
-            });
+            // $('[data-toggle="tooltip"]').tooltip({
+            //     placement: 'right'
+            // });
+            $('#selectTestType').tooltip({ 'trigger': 'focus', 'title': 'A straight typing copy includes typing alphabetical letters only (i.e. A to Z) and a couple of common punctuation symbols: the period (full-stop), comma, and question mark.<br>A statistical typing copy is a more accurate reflection of typing ability. It includes alphanumerical data (i.e. figures and dates) and other common symbols found on the keyboard.' });
+            $('#selectTestTime').tooltip({ 'trigger': 'focus', 'title': 'A one-minute typing test may give you just an idea of your typing speed. To get a more accurate picture of typing ability, you should complete a longer timed typing test.' });
 
+            $('#candRef').tooltip({ 'trigger': 'focus', 'title': 'Optional: Enter your name or examinee/candidate number.' });
+
+
+            
         });
     </script>
 </body>
