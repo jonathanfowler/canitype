@@ -1,0 +1,2 @@
+# canitype
+A local project
