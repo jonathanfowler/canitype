@@ -114,7 +114,7 @@ canvas {
 
     background-color: #fafafa;
     /* height: fit-content; */
-    display: table;
+    /* display: table; */
 
 }
 /* .container {
@@ -132,12 +132,12 @@ canvas {
 #empID {
   /*  height: 2rem; /* 36px; */
 }
-.shorterHeight {
+/* .shorterHeight {
     font-size: 1.3rem;
     text-align: center;
-    word-wrap: break-word; /* IE 11 fix */
-    max-width: 125px; /* IE 11 fix */
-}
+    word-wrap: break-word; 
+    max-width: 125px; 
+} */
 .printBtn {
    /*visibility: hidden;*/
     display: none;

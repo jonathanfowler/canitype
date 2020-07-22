@@ -70,11 +70,11 @@
           <div class="container"> 
              <div class="row buffer">
                 <div class="col-sm-3 col-xs-12 text-center ">
-                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger btn-block" id="back">Back</a>
+                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger " id="back">Back</a>
                 </div>
                 <div class="col-sm-3 col-xs-12 text-center ">
                     <div class="dropdown" id="instructionsPanel">
-                        <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger dropdown-toggle btn-block" href="#"
+                        <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger dropdown-toggle " href="#"
                             role="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Instructions
                         </a>
@@ -113,11 +113,11 @@
                 </div>
 
                 <div class="col-sm-3 col-xs-12 text-center">
-                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger btn-block" id="btnRestart">Restart</a>
+                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger " id="btnRestart">Restart</a>
                 </div>
                 <div class="col-sm-3 col-xs-12 text-center">
                     <div class="dropdown"  id="settingsPanel">
-                        <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger dropdown-toggle btn-block" href="#"
+                        <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger dropdown-toggle " href="#"
                             role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             Settings
@@ -192,33 +192,53 @@
                     </div>
                 </div>
 
-                <div class="col-2 stats noprint">
+                <div class="col-2">
 
 
-                    <div class="level">
-                        <div class="h6 text-uppercase" style="margin-top:10px">Test type</div>
-                        <!-- <div class="subtitle shorterHeight" id="testref"></div> -->
-                        <div class="h6" id="testref"></div>
-                        <div class="h6 text-uppercase">Candidate ref</div>
-                        <div class="h6" id="employeeID"></div>
-                        <div class="h6 text-uppercase" id="headingTiming">Timing</div>
-                        <div class="h6" id="countdowntimer"><span id="timer" class="title shorterHeight"></span>
+                   
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Test type</div>
+                            <!-- <div class="subtitle shorterHeight" id="testref"></div> -->
+                            <div class="col-lg-12 h5 text-center" id="testref"></div>
                         </div>
-                        <div class="h6 text-uppercase" id="headingErrorCnt">Errors</div>
-                        <div class="h6" id="noOfErrors"></div>
-                        <div class="h6 text-uppercase" id="headingRealAcc">Accuracy</div>
-                        <div class="h6" id="realAcc"></div>
-                        <div class="h6 text-uppercase">Speed</div>
-                        <div class="h6" id="speed"><sup>wpm</sup></div>
-                        <div class="h6 text-uppercase" id="headingDate">Date</div>
-                        <div class="h6" id="date"></div>
-                        <div class="h6 text-uppercase" id="headingTime">Time</div>
-                        <div class="h6" id="time"></div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Cand. ref</div>
+                            <div class="col-lg-12 h5 text-center" id="employeeID"></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingTiming">Timing</div>
+                            <div class="col-lg-12 text-center" id="countdowntimer">
+                                <span id="timer" class="h3"></span>
+                            </div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingErrorCnt">Errors</div>
+                            <div class="col-lg-12 h3 text-center" id="noOfErrors"></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingRealAcc">Accuracy</div>
+                            <div class="col-lg-12 h3 text-center" id="realAcc"></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Speed</div>
+                            <div class="col-lg-12 h3 text-center" id="speed"><sup>wpm</sup></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingDate">Date</div>
+                            <div class="col-lg-12 h3 text-center" id="date"></div>
+                        </div>
+                        <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingTime">Time</div>
+                            <div class="col-lg-12 h3 text-center" id="time"></div>
+                        </div>
                         <!-- <button id="print1" class="printBtn no-print button is-medium is-info"
                                 onclick="window.print()">Print/save</button> -->
-                        <a class="printBtn no-print myNavButtons btn btn-info btn-lg js-scroll-trigger" id="print1"
+                        <div class="row" style="justify-content: center;">
+                                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger" id="print1"
                             onclick="window.print()"">Print/Save</a>
                         </div>
+                        
+
                     </div>
                 </div>
             </div>
@@ -258,13 +278,13 @@
                     <script>
                         $(document).ready(function () {
                             $('#mainNav').hide();
-                            var test = localStorage.getItem("test");
-                            var time = localStorage.getItem("time");
-                            var candRef = localStorage.getItem("candRef");
+                            var test = sessionStorage.getItem("test");
+                            var time = sessionStorage.getItem("time");
+                            var candRef = sessionStorage.getItem("candRef");
 
 
                             typing(test, time, candRef);
-                            localStorage.clear();
+                           
 
                             $("#back").on("click", function () {
 

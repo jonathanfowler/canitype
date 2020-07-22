@@ -296,27 +296,29 @@ function buildPage(t_type, t_time, c_ref) {
       parasArray.push(Object.values(data.StrP1));
       parasArray.push(Object.values(data.StrP2));
         theStringContent = buildRandomTestContent(parasArray);
-        $("#testref").hide().html("Letter keys, and 3 punctuation keys: . , ?").fadeIn('slow');
+      //  $("#testref").hide().html("Letter keys, and 3 punctuation keys: . , ?").fadeIn('slow');
+      $("#testref").hide().html("Straight copy").fadeIn('slow');
       } else {
         if (t_type === "STAT") {
           parasArray.push(Object.values(data.StrP3));
           parasArray.push(Object.values(data.StatP2));
           parasArray.push(Object.values(data.StatP3));
           theStringContent = buildRandomTestContent(parasArray);
-          $("#testref").hide().html("Letter keys, numbers, and many common symbols").fadeIn('slow');
+          //$("#testref").hide().html("Letter keys, numbers, and many common symbols").fadeIn('slow');
+          $("#testref").hide().html("Statistical copy").fadeIn('slow');
       }
     }//end if
   } //if else
 
  if (t_time === "ONE") {
    countDownSeconds = 60;
-   startTimerText = "1 minute";
+   startTimerText = "1 min.";
   } else if (t_time === "THREE") {
      countDownSeconds = 180;
-     startTimerText = "3 minutes";
+     startTimerText = "3 mins.";
   } else if (t_time === "FIVE") {
     countDownSeconds = 300;
-    startTimerText = "5 minutes";   
+    startTimerText = "5 mins.";   
   }
  //}
 

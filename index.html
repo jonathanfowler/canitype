@@ -158,7 +158,7 @@
                     <div class="col-lg-6 col-md-6 text-center">
                         <div class="form-group">
                             <div class="input-group input-group-lg">
-                                <input name="name" type="name" placeholder=""
+                                <input name="name" type="name" placeholder="candidate reference"
                                     class="form-control border-left-0" id="candRef" maxlength="50"
                                     data-toggle="tooltip" data-placement="right" data-html="true" required=""
                                     data-original-title="" title="">
@@ -410,30 +410,10 @@
 
 
             $("#quicktest").on("click", function () {
-                localStorage.setItem("test", "STR");
-                localStorage.setItem("time", "ONE");
+                sessionStorage.setItem("test", "STR");
+                sessionStorage.setItem("time", "ONE");
                 start();
             });
-            // $("#3minSTR").on("click", function () {
-            //     localStorage.setItem("test", "STR");
-            //     localStorage.setItem("time", "THREE");
-            //     start();
-            // });
-            // $("#5minSTR").on("click", function () {
-            //     localStorage.setItem("test", "STR");
-            //     localStorage.setItem("time", "FIVE");
-            //     start();
-            // });
-            // $("#3minSTAT").on("click", function () {
-            //     localStorage.setItem("test", "STAT");
-            //     localStorage.setItem("time", "THREE");
-            //     start();
-            // });
-            // $("#5minSTAT").on("click", function () {
-            //     localStorage.setItem("test", "STAT");
-            //     localStorage.setItem("time", "FIVE");
-            //     start();
-            // });
 
             //When you hit change a dropdown selection 
             $('#selectTestType').on('change', function () {
@@ -488,15 +468,15 @@
                     // $('#selectTestTime').children().prop('disabled', true);
                     // console.log(testTime + " " + testType);
                     //localStorage.setItem(, , checkTheInp);
-                    localStorage.setItem("test", testType);
-                    localStorage.setItem("time", testTime);
+                    sessionStorage.setItem("test", testType);
+                    sessionStorage.setItem("time", testTime);
                     //  console.log(checkTheInp);
                     if (checkTheInp > 0) {
                         //   console.log(checkTheInp);
                         candReference = $("#candRef").val();
-                        localStorage.setItem("candRef", candReference);
+                        sessionStorage.setItem("candRef", candReference);
                     } else {
-                        localStorage.setItem("candRef", "-");
+                        sessionStorage.setItem("candRef", "-");
                     }
                     start();
                     //}
@@ -515,7 +495,7 @@
                     if (!loaded) {
                         window.location.href = 'test.html'; //after .htaccess file sorted delete the append .html
                     }
-                }, 500);
+                }, 100);
             }
 
             // $('#myDropdown').on('show.bs.dropdown', function () {
