@@ -90,9 +90,9 @@ canvas {
 .tabs a {
     justify-content: left;
 }
-.labelSettings {
+/* .labelSettings {
     font-size: 1.2rem;
-}
+} */
 .fontShowSize {
     height: 35px;
     align-items: baseline;
@@ -538,3 +538,8 @@ hr.divider {
 .FAQdivider {
     border-color: #Ebebeb;
 }
+
+/* .dropdown-menu > li > a:hover {
+    background-color: red;
+    background-image: none;
+} */

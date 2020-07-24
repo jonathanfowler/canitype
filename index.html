@@ -118,7 +118,7 @@
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <!-- <div class="col-lg-3">
                 </div> -->
-                    <div class="col-lg-6 col-md-6 text-center">
+                    <div class="col-lg-4 col-md-4 text-center">
                         <div class="form-group">
                             <select name="typingType" class="form-control form-control-lg" id="selectTestType"
                             data-toggle="tooltip" data-placement="right" data-html="true" required=""
@@ -135,7 +135,7 @@
 
 
                 <div class="row h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-6 col-md-6 text-center">
+                    <div class="col-lg-4 col-md-4 text-center">
                         <div class="form-group">
                             <select name="typingTime" class="form-control form-control-lg" id="selectTestTime"
                                 data-toggle="tooltip" data-placement="right" data-html="true" required=""
@@ -155,7 +155,7 @@
 
 
                 <div class="row h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-6 col-md-6 text-center">
+                    <div class="col-lg-4 col-md-4 text-center">
                         <div class="form-group">
                             <div class="input-group input-group-lg">
                                 <input name="name" type="name" placeholder="candidate reference"
@@ -454,18 +454,7 @@
                 } else if (testTime <= 0) {
                     div2.textContent = "You must select a test time.";
                 } else {
-                    // else if (checkTheInp <= 0) {
-                    //     div.textContent = "You must enter a candidate reference.";
-                    // }
-                    //  console.log(testTime + " " + testType);
-                    //  console.log($("selectTestTime"));
-                    // if (testType && testTime > 0) {
-                    // $('#warningbox').show();
-                    // $('#candRef').prop('disabled', true);
-                    // $('#selectTestType').children().prop('disabled', true);
-                    // $('#selectTestTime').children().prop('disabled', true);
-                    // console.log(testTime + " " + testType);
-                    //localStorage.setItem(, , checkTheInp);
+
                     sessionStorage.setItem("test", testType);
                     sessionStorage.setItem("time", testTime);
                     //  console.log(checkTheInp);
@@ -491,19 +480,11 @@
                 };
                 setTimeout(function () {
                     if (!loaded) {
-                        window.location.href = 'test'; //after .htaccess file sorted delete the append .html
+                        window.location.href = 'test.html'; //after .htaccess file sorted delete the append .html
                     }
                 }, 100);
             }
 
-            // $('#myDropdown').on('show.bs.dropdown', function () {
-            //     // do something…
-            // })
-
-
-            // $('[data-toggle="tooltip"]').tooltip({
-            //     placement: 'right'
-            // });
             $('#selectTestType').tooltip({ 'trigger': 'focus', 'title': 'A straight typing copy includes typing alphabetical letters only (i.e. A to Z) and a couple of common punctuation symbols: the period (full-stop), comma, and question mark.<br>A statistical typing copy is a more accurate reflection of typing ability. It includes alphanumerical data (i.e. figures and dates) and other common symbols found on the keyboard.' });
             $('#selectTestTime').tooltip({ 'trigger': 'focus', 'title': 'A one-minute typing test may give you just an idea of your typing speed. To get a more accurate picture of typing ability, you should complete a longer timed typing test.' });
 

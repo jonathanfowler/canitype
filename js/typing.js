@@ -991,16 +991,16 @@ $('#btnRestart').on("click", function (e) {
 }); //end $('#btnRestart').on("click", function(e)
 
 $('#settingsPanel').on("click mouseover", function (e) {
-    // console.log("this "+this);
-   // console.log("clicked or mouseovered settingsPanel id");
     //if user clicks the a hyperlink part in the panel
     if (e.target.tagName.toLowerCase() === 'a') {
       var whatwasselected = $(e.target).parent();
       var theSiblings = $(e.target).parent().siblings();
       var userChoice = e.target.innerHTML;
       typContChanging = $('#typingContent');
-      theSiblings.removeClass('is-active');
-      whatwasselected.addClass('is-active');
+      // theSiblings.removeClass('is-active');
+      // whatwasselected.addClass('is-active');
+      theSiblings.removeClass('active');
+      whatwasselected.addClass('active');
       switch (userChoice) {
         case 'Small':
           typContChanging.css("font-size", "25px");
@@ -1048,12 +1048,6 @@ $('#settingsPanel').on("click mouseover", function (e) {
 });
 
 
-//$('#instructionsPanel').on("click mouseover mouseout", function (e) {
-  // $('#instructionsPanel').on('hidden.bs.dropdown', function () {
-  //   // do something…
-  //   console.log("clicked");
-  //   textTyped.focus();
-  // });
 
 
 
