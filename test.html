@@ -198,18 +198,18 @@
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-2 card">
 
 
                    
                         <div class="row form-group stats">
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2">Test type</div>
                             <!-- <div class="subtitle shorterHeight" id="testref"></div> -->
-                            <div class="col-lg-12 h5 text-center" id="testref"></div>
+                            <div class="col-lg-12 h3 text-center" id="testref"></div>
                         </div>
-                        <div class="row form-group stats">
+                        <div class="row form-group stats hideCandRef">
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2">Cand. ref</div>
-                            <div class="col-lg-12 h5 text-center" id="employeeID"></div>
+                            <div class="col-lg-12 h3 text-center" id="employeeID"></div>
                         </div>
                         <div class="row form-group stats">
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingTiming">Timing</div>
@@ -218,17 +218,19 @@
                             </div>
                         </div>
                         <div class="row form-group stats">
+                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Speed</div>
+                            <div class="col-lg-12 h3 text-center" id="speed"><sup style="font-size: 1rem;">wpm</sup></div>
+                        </div>
+                        <div class="row form-group stats">
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingErrorCnt">Errors</div>
                             <div class="col-lg-12 h3 text-center" id="noOfErrors"></div>
                         </div>
+
                         <div class="row form-group stats">
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingRealAcc">Accuracy</div>
                             <div class="col-lg-12 h3 text-center" id="realAcc"></div>
                         </div>
-                        <div class="row form-group stats">
-                            <div class="col-lg-12 h5 text-uppercase text-center mt-2">Speed</div>
-                            <div class="col-lg-12 h3 text-center" id="speed"><sup>wpm</sup></div>
-                        </div>
+
                         <div class="row form-group stats">
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingDate">Date</div>
                             <div class="col-lg-12 h3 text-center" id="date"></div>
@@ -239,7 +241,7 @@
                         </div>
                         <!-- <button id="print1" class="printBtn no-print button is-medium is-info"
                                 onclick="window.print()">Print/save</button> -->
-                        <div class="row" style="justify-content: center;">
+                        <div class="row" style="justify-content: center; padding-bottom: 1rem;">
                                     <a class="printBtn myNavButtons btn btn-info btn-lg js-scroll-trigger" id="print1"
                             onclick="window.print()"">Print/Save</a>
                         </div>
@@ -292,7 +294,7 @@
 
 
                                 sessionStorage.clear();
-                                window.location.href = 'index'; //after .htaccess file sorted delete the append .html
+                                window.location.href = 'index.html'; //after .htaccess file sorted delete the append .html
 
 
                             });

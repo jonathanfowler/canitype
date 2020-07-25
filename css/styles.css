@@ -112,9 +112,10 @@ canvas {
 }
 .stats {
 
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     /* height: fit-content; */
     /* display: table; */
+    color: #212529;
 
 }
 /* .container {
@@ -126,9 +127,9 @@ canvas {
 .title:not(:last-child) {
     margin-bottom: 1rem;
 }
-#speed {
+/* #speed {
     height: 36px;
-}
+} */
 #empID {
   /*  height: 2rem; /* 36px; */
 }
@@ -142,7 +143,7 @@ canvas {
    /*visibility: hidden;*/
     display: none;
     white-space: normal;
-    height: 4rem; 
+    /* height: 4rem;  */
 } 
 
 .textOverInview {
@@ -161,7 +162,7 @@ canvas {
     width:auto;
 }
 sup {
-    font-size: 8px;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing:normal;
     line-height:normal;
@@ -199,11 +200,7 @@ sup {
   text-align: center;
   font-size: 18pt;
 }
-#speed  {
-    /* font-family: Arial, sans-serif;
-    margin: 2px;
-    font-size: 12pt; */
-}
+
 #err  {
     /* font-family: Arial, sans-serif;
     margin: 2px;
@@ -538,7 +535,9 @@ hr.divider {
 .FAQdivider {
     border-color: #Ebebeb;
 }
-
+.hideCandRef {
+    display: none;
+}
 /* .dropdown-menu > li > a:hover {
     background-color: red;
     background-image: none;

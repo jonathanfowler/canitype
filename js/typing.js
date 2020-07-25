@@ -297,7 +297,7 @@ function buildPage(t_type, t_time, c_ref) {
       parasArray.push(Object.values(data.StrP2));
         theStringContent = buildRandomTestContent(parasArray);
       //  $("#testref").hide().html("Letter keys, and 3 punctuation keys: . , ?").fadeIn('slow');
-      $("#testref").hide().html("Straight copy").fadeIn('slow');
+      $("#testref").hide().html("Straight").fadeIn('slow');
       } else {
         if (t_type === "STAT") {
           parasArray.push(Object.values(data.StrP3));
@@ -305,20 +305,20 @@ function buildPage(t_type, t_time, c_ref) {
           parasArray.push(Object.values(data.StatP3));
           theStringContent = buildRandomTestContent(parasArray);
           //$("#testref").hide().html("Letter keys, numbers, and many common symbols").fadeIn('slow');
-          $("#testref").hide().html("Statistical copy").fadeIn('slow');
+          $("#testref").hide().html("Statistical").fadeIn('slow');
       }
     }//end if
   } //if else
 
  if (t_time === "ONE") {
    countDownSeconds = 60;
-   startTimerText = "1 min.";
+   startTimerText = "1 minute";
   } else if (t_time === "THREE") {
      countDownSeconds = 180;
-     startTimerText = "3 mins.";
+     startTimerText = "3 minutes";
   } else if (t_time === "FIVE") {
     countDownSeconds = 300;
-    startTimerText = "5 mins.";   
+    startTimerText = "5 minutes";   
   }
  //}
 
@@ -328,7 +328,12 @@ function buildPage(t_type, t_time, c_ref) {
  $("#timer").addClass("ready shorterHeight");
  clearSpeed();
 // $("#testref").hide().html(t_type).fadeIn('slow');
- $("#employeeID").hide().html(c_ref).fadeIn('slow');
+if (c_ref !== null) {
+  console.log("null");
+  $(".stats").removeClass("hideCandRef");
+  $("#employeeID").hide().html(c_ref).fadeIn('slow');
+}
+ 
  $('#speed').hide().html("0").fadeIn('slow');
  $('#noOfErrors').hide().html("0").fadeIn('slow');
  $("#timer").hide().html(startTimerText).fadeIn('slow');
@@ -616,7 +621,7 @@ var keyUp = function (e) {
     var errPercent = ((((numberInTyping - noOfErrors) / numberInTyping) * 100).toFixed(2));
     //  console.log(" errPercent "+errPercent);
 
-    if (errPercent < 99) { //should be < 90
+    if (errPercent < 90) { //should be < 90
       $('.modal').addClass('is-active');
       $('#warningErrors').modal('show');
       $("#timer").countdowntimer("pause", "pause");

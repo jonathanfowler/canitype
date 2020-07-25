@@ -462,8 +462,8 @@
                         //   console.log(checkTheInp);
                         candReference = $("#candRef").val();
                         sessionStorage.setItem("candRef", candReference);
-                    } else {
-                        sessionStorage.setItem("candRef", "-");
+                    // } else {
+                    //  //   sessionStorage.setItem("candRef", null);
                     }
                     start();
                     //}
@@ -480,7 +480,7 @@
                 };
                 setTimeout(function () {
                     if (!loaded) {
-                        window.location.href = 'test'; //after .htaccess file sorted delete the append .html
+                        window.location.href = 'test.html'; //after .htaccess file sorted delete the append .html
                     }
                 }, 100);
             }
