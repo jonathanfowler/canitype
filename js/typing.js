@@ -329,7 +329,6 @@ function buildPage(t_type, t_time, c_ref) {
  clearSpeed();
 // $("#testref").hide().html(t_type).fadeIn('slow');
 if (c_ref !== null) {
-  console.log("null");
   $(".stats").removeClass("hideCandRef");
   $("#employeeID").hide().html(c_ref).fadeIn('slow');
 }

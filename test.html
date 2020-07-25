@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -56,10 +55,6 @@
                     <div class="modal-body">
                         Please focus on your accuracy. Click Restart to take the attempt again.
                     </div>
-                    <!-- <div class="modal-footer">
-                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                     <button type="button" class="btn btn-success">Save</button>
-                  </div> -->
                 </div>
             </div>
         </div>
@@ -199,12 +194,9 @@
                 </div>
 
                 <div class="col-2 card">
-
-
                    
                         <div class="row form-group stats">
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2">Test type</div>
-                            <!-- <div class="subtitle shorterHeight" id="testref"></div> -->
                             <div class="col-lg-12 h3 text-center" id="testref"></div>
                         </div>
                         <div class="row form-group stats hideCandRef">
@@ -239,8 +231,6 @@
                             <div class="col-lg-12 h5 text-uppercase text-center mt-2" id="headingTime">Time</div>
                             <div class="col-lg-12 h3 text-center" id="time"></div>
                         </div>
-                        <!-- <button id="print1" class="printBtn no-print button is-medium is-info"
-                                onclick="window.print()">Print/save</button> -->
                         <div class="row" style="justify-content: center; padding-bottom: 1rem;">
                                     <a class="printBtn myNavButtons btn btn-info btn-lg js-scroll-trigger" id="print1"
                             onclick="window.print()"">Print/Save</a>
@@ -252,12 +242,9 @@
             </div>
         </section>
 
-
-
         <textarea id="typingInput" class="invisibleInput" autocomplete="off" autocorrect="off" autocapitalize="off"
                             autofocus="" onpaste="return false;" oncut="return false;" spellcheck="false"></textarea>
                     </div>
-
 
                     <!-- Footer-->
                     <footer class="py-5">
@@ -267,7 +254,7 @@
                     <script src="js/jquery-ui.min.js"></script>
                     <script src="js/chance.min.js"></script>
                     <script src="js/jQuery.countdownTimer.min.js"></script>
-                    <script src="js/typing.js"></script>
+                    <script src="js/typing.min.js"></script>
 
                     <script
                         src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -285,17 +272,12 @@
                             var test = sessionStorage.getItem("test");
                             var time = sessionStorage.getItem("time");
                             var candRef = sessionStorage.getItem("candRef");
-
-
                             typing(test, time, candRef);
                            
 
                             $("#back").on("click", function () {
-
-
                                 sessionStorage.clear();
                                 window.location.href = 'index'; //after .htaccess file sorted delete the append .html
-
 
                             });
                         });
