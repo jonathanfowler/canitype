@@ -47,14 +47,15 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Physical keyboard not detected!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                        </button>
+                        </button> -->
                     </div>
                     <div class="modal-body">
                         <p>We've detected that you are using a device without a physical keyboard.</p>
                         <p>The tests on this site are designed for use with a standard QWERTY English keyboard, and cannot be conducted using touch screen keyboards.</p>
-                        <p>You should switch to another device such as a computer or laptop with a physical keyboard.</p>
+                        <p>You should switch to another device such as a computer or laptop with a physical keyboard.</p><br>
+                        <p style="text-align:center;"><a class="myNavButtons btn btn-info btn-lg js-scroll-trigger back">Back</a></p>
                          
                     </div>
                 </div>
@@ -84,7 +85,7 @@
           <div class="container"> 
              <div class="row buffer">
                 <div class="col-sm-3 col-xs-12 text-center ">
-                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger " id="back">Back</a>
+                    <a class="myNavButtons btn btn-info btn-lg js-scroll-trigger back">Back</a>
                 </div>
                 <div class="col-sm-3 col-xs-12 text-center ">
                     <div class="dropdown" id="instructionsPanel">
@@ -295,7 +296,7 @@
                             typing(test, time, candRef);
                            
 
-                            $("#back").on("click", function () {
+                            $(".back").on("click", function () {
                                 sessionStorage.clear();
                                 window.location.href = 'index'; //after .htaccess file sorted delete the append .html
 
